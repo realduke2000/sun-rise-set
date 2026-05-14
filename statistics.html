@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>日出日落可视化</title>
+<!-- <script src="./chart.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  body { font-family: sans-serif; margin: 20px; }
+  h2 { text-align: center; }
+  .chart-container { width: 90%; margin: 40px auto; }
+</style>
+</head>
+<body>
+
+<h2>2025年北京城区日出和日落时刻</h2>
+<div class="chart-container">
+  <canvas id="monthlyChart"></canvas>
+</div>
+
+<h2>2025年北京24节气日出日落昼长图</h2>
+<div class="chart-container">
+  <canvas id="solarTermsChart"></canvas>
+</div>
+
+<script src="data.js">
+</script>
+<script src="statistics.js">
+</script>
+
+</body>
+</html>

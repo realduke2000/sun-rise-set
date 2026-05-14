@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>北京日出日落时间表</title>
+<style>
+  body {
+    font-family: "微软雅黑", sans-serif;
+    background: #f0f8ff;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  #astro-img {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 150px;
+  }
+  table {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  th {
+    background: #87ceeb;
+    color: white;
+    position: sticky;
+    top: 0;
+  }
+  img.sun-icon {
+    width: 24px;
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+  #status-container {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  #refresh-btn {
+    display: block;
+    margin: 10px auto 30px auto;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: url('gear.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    animation: spin 2s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
+</style>
+</head>
+<body>
+
+<h1>北京日出日落时间表</h1>
+<img id="astro-img" src="astro.png" alt="天文图片">
+
+<table id="sun-table">
+  <thead>
+    <tr>
+      <th>日期</th>
+      <th>日出</th>
+      <th>日落</th>
+      <th>白昼时长</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 数据动态加载 -->
+  </tbody>
+</table>
+
+<div id="status-container">数据抓取中...</div>
+<button id="refresh-btn" title="刷新数据"></button>
+
+<script src="data.js"></script>
+
+<script src="datagrid.js">
+</script>
+
+</body>
+</html>
